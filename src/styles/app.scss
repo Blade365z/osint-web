@@ -1,0 +1,108 @@
+@import "./breakpoints.scss";
+
+@mixin verticallyCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  height: 100vh;
+  position: relative;
+}
+.nav {
+  @include media(">=tablet") {
+    justify-content: center;
+  }
+  @include media("<=tablet") {
+    .navbar {
+      width: 100%;
+    }
+  }
+  background-color: black;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  a {
+    color: #ffff !important;
+  }
+  .nav-item {
+    margin: 0px 30px 0px 0px;
+  }
+}
+
+.into-logo {
+  @include media("<desktop") {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    img {
+      height: 9vh;
+      margin-bottom: 20px;
+    }
+    .lab-intro-text {
+      padding: 0px 20px 0px 20px;
+      article {
+        @include media("<tablet") {
+          font-size: 13px;
+        }
+        color: #ffff;
+        text-align: justify;
+      }
+    }
+  }
+  @include media(">=desktop") {
+    @include verticallyCenter();
+    img {
+      height: 10vh;
+    }
+    .lab-intro-text {
+      width: 34.5vw;
+      margin: 0px 10px 0px 10px;
+      article {
+        color: #ffff;
+        text-align: justify;
+      }
+    }
+  }
+  background-color: black;
+  height: 70vh;
+}
+
+.home {
+  height: 93vh;
+}
+
+.nav-logo {
+  @include verticallyCenter();
+  img {
+    height: 3.5vh;
+  }
+}
+
+.osint-tile {
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  display: grid;
+  grid-template-columns: 15% 75%;
+  .tile-icon {
+    @include media(">=desktop") {
+      @include verticallyCenter();
+    }
+    @include media("<desktop") {
+      margin: 15px 0px 0px 15px;
+    }
+    width: 4vw;
+    i {
+      font-size: 2em;
+    }
+  }
+  .tile-text {
+    padding: 10px 10px 10px 30px;
+    article {
+      font-size: 13px;
+      text-align: justify;
+    }
+  }
+}
