@@ -88,21 +88,35 @@
   grid-template-columns: 15% 75%;
   .tile-icon {
     @include media(">=desktop") {
+      height: 100px;
       @include verticallyCenter();
+      i {
+        font-size: 2em;
+      }
     }
     @include media("<desktop") {
+      @include media(">=tablet") {
+        height: 250px;
+        i {
+          font-size: 1em;
+        }
+      }
+      @include media("<tablet") {
+        height: 100px;
+        i {
+          font-size: 2em;
+        }
+      }
       margin: 15px 0px 0px 15px;
-    }
-    width: 4vw;
-    i {
-      font-size: 2em;
     }
   }
   .tile-text {
-    padding: 10px 10px 10px 30px;
+    padding: 10px 10px 10px 10px;
+    @include media("<=tablet") {
+      padding: 10px 10px 10px 20px;
+    }
     article {
       font-size: 13px;
-      text-align: justify;
     }
   }
 }
