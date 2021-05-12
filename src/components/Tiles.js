@@ -6,7 +6,7 @@ const Tile = ({ title, description, icon }) => {
             <div className="tile-icon">
                 <i className={icon}></i>
             </div>
-            <div className="tile-text">
+            <div className="tile-text py-3 ps-4 pe-2 ">
                 <h5>{title}</h5>
                 <article>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

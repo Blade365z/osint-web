@@ -80,43 +80,34 @@
   }
 }
 
-.osint-tile {
-  border-radius: 10px;
-  background-color: rgb(0, 0, 0);
-  color: white;
+.osint-tiles-group {
   display: grid;
-  grid-template-columns: 15% 75%;
-  .tile-icon {
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  @include media(">=desktop") {
+    grid-template-columns: repeat(3, minmax(20rem, 1fr));
+  }
+  .osint-tile {
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: grid;
+    grid-template-columns: 15% 85%;
     @include media(">=desktop") {
-      height: 100px;
+    }
+    .tile-icon {
       @include verticallyCenter();
       i {
-        font-size: 2em;
-      }
-    }
-    @include media("<desktop") {
-      @include media(">=tablet") {
-        height: 250px;
-        i {
+        font-size: 1.6em;
+        @include media("<desktop") {
           font-size: 1em;
         }
+        padding: 10px 10px 10px 30px;
       }
-      @include media("<tablet") {
-        height: 100px;
-        i {
-          font-size: 2em;
-        }
+    }
+    .tile-text {
+      article {
+        font-size: 13px;
       }
-      margin: 15px 0px 0px 15px;
-    }
-  }
-  .tile-text {
-    padding: 10px 10px 10px 10px;
-    @include media("<=tablet") {
-      padding: 10px 10px 10px 20px;
-    }
-    article {
-      font-size: 13px;
     }
   }
 }

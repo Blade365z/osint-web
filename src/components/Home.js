@@ -10,12 +10,12 @@ const Home = () => {
                 <div className="mt-5 px-2">
                     <h2 style={{ textAlign: 'center' }}>Our research directions include </h2>
                 </div>
-                <div className="row">
-                    <div className="col-sm-4"> <Tile title="Topic Modeling" icon="far fa-comment-alt" /></div>
-                    <div className="col-sm-4"><Tile title="Event Detection" icon="far fa-calendar-check" /> </div>
-                    <div className="col-sm-4"><Tile title="Sentiment Analysis" icon="far fa-grin" /> </div>
-                    <div className="col-sm-4"><Tile title="Text to Speech Synthesis" icon="fas fa-quote-left" /> </div>
-                    <div className="col-sm-4"><Tile title="Social Network Analysis" icon="fas fa-project-diagram" /> </div>
+                <div className="osint-tiles-group">
+                    <div> <Tile title="Topic Modeling" icon="far fa-comment-alt" /></div>
+                    <div><Tile title="Event Detection" icon="far fa-calendar-check" /> </div>
+                    <div><Tile title="Sentiment Analysis" icon="far fa-grin" /> </div>
+                    <div><Tile title="Text to Speech Synthesis" icon="fas fa-quote-left" /> </div>
+                    <div><Tile title="Social Network Analysis" icon="fas fa-project-diagram" /> </div>
 
                 </div>
             </div>
